@@ -1,0 +1,36 @@
+<!--
+* @Developer: Divek
+* @Project  :Todo List with local storage and JavaScript
+* @Date     : 21-7-2018
+* @copyright: WSA Academy
+* @license  : GPL
+* @version  : 1.0
+* @Bugs     : Not Able to store more than 10 items/Delete only works in FIFO fashion/Semi Responsive
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./js/appStyle.css">
+</head>
+<body onload="fetchOld()">
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">To Do List</h2>
+  <input type="text" id="myInput" placeholder="Start typing a activity...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+
+</div>
+<div style=" margin:-2% 2% 0 2%; background: #fff; width: auto; height: auto; border-radius: 5px; box-shadow: 5px 5px 30px black">
+   <span onclick="(confirm('Are you sure you wanna delete ervery task'))?localStorage.clear():'';location.reload()" class="delBtn">&times</span>
+<ol id="myol">
+
+</ol>
+</div>
+
+<script src="./js/app.js">
+</script>
+
+</body>
+</html>
